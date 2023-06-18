@@ -2,4 +2,4 @@
 
 |   | Проект | Описание | Инструменты | Теги
 |---|---|---|---|---|
-|   | [Airbnb analitics](https://github.com/an-karpov/Portfolio/tree/main/Airbnb%20analytics) |  | Python, pandas, numpy, matplotlib, plotly. | Аналитика, RFM-анализ ||   | [Airbnb analitics]() |  | Python, pandas, numpy, scipy, stats, matplotlib. | ICE, RICE, A/B тест. |
+|   | [Airbnb analitics](https://github.com/an-karpov/Portfolio/tree/main/Airbnb%20analytics) | Аналитика клиентов сервиса Airbnb с целью их сегментации и выявления группы пользователей для предоставления им персонального предложения. | Python, pandas, numpy, matplotlib, plotly. | Аналитика, RFM-анализ || 
