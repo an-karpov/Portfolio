@@ -4,8 +4,7 @@
 _Целевая переменная_ (таргет) – `SeriousDlqin2yrs`: клиент имел просрочку 90 и более дней
 
 ### Признаки
-- `RevolvingUtilizationOfUnsecuredLines`: общий баланс средств (total balance on credit cards and personal lines of credit except real estate and no installment debt
-like car loans divided by the sum of credit limits)
+- `RevolvingUtilizationOfUnsecuredLines`: общий баланс средств (общий баланс по кредитным картам и личным кредитным линиям, за исключением недвижимости и долгов без рассрочки, таких как автокредиты, деленный на сумму кредитных лимитов)
 - `age`: возраст заемщика
 - `NumberOfTime30-59DaysPastDueNotWorse`: сколько раз за последние 2 года наблюдалась просрочка 30-59 дней
 - `DebtRatio`: ежемесячные расходы (платеж по долгам, алиментам, расходы на проживания) деленные на месячный доход
@@ -20,12 +19,26 @@ like car loans divided by the sum of credit limits)
 
 
 ### Структура каталога
-- '/data' -- папка с данными
-- 'EDA_credit_scoring.ipynb' -- файл с развёрточным анализом данных (поиск аномалий, выбросов, пропусков)
-- 'test_models.ipynb' -- файл с тестированием моделей, подбором их гиперпараметров, интерпретацией
-- 'model.ipynb' --
-- 'preprocessing.py' -- скрипт для предобработки данных
+- `/data` -- папка с данными
+- `/models` -- папка с обучеными моделями
+- `EDA_credit_scoring.ipynb` -- файл с развёрточным анализом данных (поиск аномалий, выбросов, пропусков)
+- `test_models.ipynb` -- файл с тестированием моделей, подбором их гиперпараметров, интерпретацией
+- `model.ipynb` --
+- `preprocessing.py` -- скрипт для предобработки данных
+
+## Запуск локально
+### Shell
+
+```shell
+$ python -m venv venv
+$ source venv/bin/activate
+$ pip install -r requirements.txt
+$ streamlit run app.py
+```
+
 
 
 ### Описание
-В качестве основной модели использовался **XGBClassifier**. Для подбора гиперпараметров использовалась Баессовская оптимизация (библиотека hyperopt).   
+В качестве основной модели использовался **XGBClassifier**. Для подбора гиперпараметров использовалась Баессовская оптимизация (библиотека hyperopt). Для балансировки классов использовалась процедура "upsampling"
+
+<img src="/pics/xgb_pipeline_score.png" alt="Alt text" title="Лучшее еачество модели">
