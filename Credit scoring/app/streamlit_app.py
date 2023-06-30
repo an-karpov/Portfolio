@@ -77,7 +77,8 @@ with st.sidebar:
 
     number_of_credits = st.number_input('How many number of open credit lines and loans do you have?', min_value=0, max_value=100, step=1, value=NumberOfOpenCreditLinesAndLoans)
 
-    dept_ratio = st.slider('Your dept ratio:', min_value=0.0, max_value=3000.0, step=0.01, value=DebtRatio)
+    dept_ratio = st.number_input('Your dept ratio:', min_value=0.0, max_value=3000.0, step=0.01, value=DebtRatio)
+    # dept_ratio = st.slider('Your dept ratio:', min_value=0.0, max_value=3000.0, step=0.01, value=DebtRatio)
 
     rev_util = st.slider('Total balance on credit cards and personal lines of credit (RevolvingUtilizationOfUnsecuredLines):', min_value=0.00, max_value=1.00, step=0.01, value=RevolvingUtilizationOfUnsecuredLines)
 
