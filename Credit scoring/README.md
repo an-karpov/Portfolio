@@ -19,12 +19,24 @@ _Целевая переменная_ (таргет) – `SeriousDlqin2yrs`: к�
 
 
 ### Структура каталога
-- `/data` -- папка с данными
-- `/models` -- папка с обучеными моделями
-- `EDA_credit_scoring.ipynb` -- файл с развёрточным анализом данных (поиск аномалий, выбросов, пропусков)
-- `test_models.ipynb` -- файл с тестированием моделей, подбором их гиперпараметров, интерпретацией
-- `model.ipynb` --
-- `preprocessing.py` -- скрипт для предобработки данных
+```txt
+├── README.md
+├── data
+│   ├── credit_scoring.csv       <- Original data
+│   └── preprocessed_data.csv    <- Preprocessed data
+│
+├── app                <- Streamlit App.
+│
+├── models             <- Saved models.
+│
+├── pics               <- pictures
+│
+├── EDA_credit_scoring.ipynb
+├── test-models.ipynb
+│
+└── requirements.txt   <- The requirements file for reproducing the analysis environment, e.g.
+                          generated with `pip freeze > requirements.txt`
+```
 
 ## Запуск локально
 ### Shell
